@@ -1,6 +1,6 @@
-"""Platform parser bindings."""
-import importlib
+"""Notebook profile parser bindings."""
+from nb_profiles_native import nb_profile_parse
 
 
-def load():
-    return importlib.import_module("nb._nbprofile")
+def parse(path):
+    return nb_profile_parse(str(path).encode())
